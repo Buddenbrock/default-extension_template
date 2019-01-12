@@ -1,0 +1,64 @@
+# ==============================================
+# FE-Plugin configuration for EXT:news
+# ==============================================
+
+plugin.tx_news {
+  _LOCAL_LANG {
+    de {
+      paginate_next = »
+      paginate_previous = «
+      paginate_overall = Seite %s von %s
+      related-links = Links
+      related-files = Dateien
+    }
+  }
+
+  settings {
+    #Displays a dummy image if the news have no media items
+		displayDummyIfNoMedia = 1
+
+    startingpoint = {$sources.news}
+    listPid = {$targets.news.list}
+    backPid = {$targets.news.back}
+    defaultDetailPid = {$targets.news.detail}
+    cropMaxCharacters = {$plugin.tx_news.settings.cropMaxCharacters}
+
+    # Detail
+    detail {
+      errorHandling = showStandaloneTemplate,EXT:news/Resources/Private/Templates/News/DetailNotFound.html,404
+      media {
+				image {
+					maxWidth = 640
+					maxHeight =
+				}
+
+				video {
+					width = 640
+					height =
+				}
+			}
+    }
+
+    # List
+    list {
+			# media configuration
+			media {
+				image {
+					maxWidth = 640
+					maxHeight =
+				}
+				dummyImage = typo3conf/ext/news/Resources/Public/Images/dummy-preview-image.png
+			}
+
+			# Paginate configuration.
+			paginate {
+				itemsPerPage = 10
+				insertAbove = 0
+				insertBelow = 1
+				templatePath =
+				prevNextHeaderTags = 1
+				maximumNumberOfLinks = 3
+			}
+		}
+  }
+}

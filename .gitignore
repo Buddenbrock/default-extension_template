@@ -1,0 +1,46 @@
+# TYPO3 Files
+Resources/Public/
+
+# git-review
+/.gitreview
+
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear on network drives
+.smbdelete*
+.nfs.*
+
+# Backups
+*.bak
+*~
+*.svn
+*.old
+.subl*
+
+# YARD artifacts
+.yardoc
+_yardoc
+
+# Patch
+**.orig
+**.rej
+
+# DirEnv
+.envrc
+
+# Sublime / ATOM PHP Code Intel
+.phpintel
+
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion
+#
+*.iml
+
+#
+# ## Directory-based project format:
+.idea/

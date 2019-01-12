@@ -1,0 +1,8 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:xyz_template/Configuration/PageTS/Mod/WebLayout/BackendLayout.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:xyz_template/Configuration/PageTS/TCEFORM.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:xyz_template/Configuration/PageTS/TCEMAIN.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:xyz_template/Configuration/PageTS/ContentElements/newContentElementWizard.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:xyz_template/Configuration/PageTS/RTE.txt">
+
+# Add Extension Page-TS-Setup here
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:xyz_template/Configuration/PageTS/News/setup.txt">

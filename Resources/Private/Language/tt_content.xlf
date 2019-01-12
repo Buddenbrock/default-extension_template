@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" product-name="xyz_template">
+  <header/>
+  <body>
+    <trans-unit id="label.blockstyle.p" xml:space="preserve">
+      <source>Paragraph</source>
+    </trans-unit>
+    <trans-unit id="label.header_layout.1" xml:space="preserve">
+      <source>Header #1</source>
+    </trans-unit>
+    <trans-unit id="label.header_layout.2" xml:space="preserve">
+      <source>Header #2</source>
+    </trans-unit>
+    <trans-unit id="label.header_layout.3" xml:space="preserve">
+      <source>Header #3</source>
+    </trans-unit>
+    <trans-unit id="label.header_layout.4" xml:space="preserve">
+      <source>Header #4</source>
+    </trans-unit>
+    <trans-unit id="label.header_layout.5" xml:space="preserve">
+      <source>Header #5</source>
+    </trans-unit>
+    <trans-unit id="label.blockstyle.blockquote" xml:space="preserve">
+      <source>Blockquote</source>
+    </trans-unit>
+  </body>
+  </file>
+</xliff>

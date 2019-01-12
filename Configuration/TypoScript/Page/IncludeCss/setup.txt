@@ -1,0 +1,3 @@
+page.includeCSS {
+  styles = EXT:xyz_template/Resources/Public/Css/styles.css
+}

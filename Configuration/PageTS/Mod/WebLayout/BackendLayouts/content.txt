@@ -1,0 +1,27 @@
+mod {
+  web_layout {
+    BackendLayouts {
+      content {
+        title = Inhaltsseite
+        config {
+          backend_layout {
+            colCount = 1
+            rowCount = 1
+            rows {
+              1 {
+                columns {
+                  1 {
+                      name = Inhaltsbereich
+                      colPos = 1
+                      allowed = xyz_text
+                  }
+                }
+              }
+            }
+          }
+        }
+        icon = EXT:core/Resources/Public/Icons/T3Icons/apps/apps-pagetree-page-default.svg
+      }
+    }
+  }
+}

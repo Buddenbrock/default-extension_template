@@ -1,0 +1,15 @@
+TCEMAIN.table.pages {
+  disablePrependAtCopy = 1
+}
+
+TCEMAIN.table.tt_content {
+  disablePrependAtCopy = 1
+}
+
+TCEMAIN {
+  permissions {
+    userid = 1
+    groupid = 1
+    group = show, editcontent, edit, new, delete
+  }
+}

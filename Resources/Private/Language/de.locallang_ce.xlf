@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+  <file source-language="en" target-language="de" datatype="plaintext" original="messages" product-name="xyz_template">
+  <header/>
+  <body>
+    <trans-unit id="content_elements" xml:space="preserve">
+      <source>Content Elements</source>
+      <target>Inhaltselemente</target>
+    </trans-unit>
+
+    <trans-unit id="text" xml:space="preserve">
+      <source>Text</source>
+      <target>Text</target>
+    </trans-unit>
+    <trans-unit id="text.description" xml:space="preserve">
+      <source>Text Element.</source>
+      <target>Für Überschriften und Texte.</target>
+    </trans-unit>
+
+  </body>
+  </file>
+</xliff>

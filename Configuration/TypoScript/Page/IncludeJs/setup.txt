@@ -1,0 +1,3 @@
+page.includeJSFooter {
+  default = EXT:xyz_template/Resources/Public/JavaScript/site.js
+}

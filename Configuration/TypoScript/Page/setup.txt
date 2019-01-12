@@ -1,0 +1,89 @@
+# The PAGE OBJECT template.
+#
+# Tells the PAGE object to use the parsed HTML template from the automaketemplate extension.
+
+# Make the PAGE object
+page = PAGE
+page {
+  typeNum = 0
+
+  # Add the icon that will appear in front of the url in the browser
+  # This icon will also be used for the bookmark menu in browsers
+  shortcutIcon = EXT:xyz_template/Resources/Public/Icons/favicon.png
+
+  # Add a FLUIDTEMPLATE object to the page
+  10 = FLUIDTEMPLATE
+  10 {
+    dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+    dataProcessing.10 {
+      if {
+        isTrue.field = media
+      }
+      references.fieldName = media
+      references.table = pages
+      as = mediaimages
+    }
+
+    templateName = TEXT
+    templateName.stdWrap {
+      cObject = CASE
+      cObject {
+        key.data = pagelayout
+
+        pagets__index = TEXT
+        pagets__index.value = Index
+
+        pagets__content = TEXT
+        pagets__content.value = Content
+      }
+      ifEmpty = Index
+    }
+
+    templateRootPaths {
+      10 = EXT:xyz_template/Resources/Private/Templates/Pages/
+    }
+    layoutRootPaths {
+      10 = EXT:xyz_template/Resources/Private/Layouts/Pages/
+    }
+    partialRootPaths {
+      10 = EXT:xyz_template/Resources/Private/Partials/Pages/
+    }
+
+    settings {
+      sources {
+        menu {
+          main = {$sources.menu.main}
+          footer = {$sources.menu.footer}
+          meta = {$sources.menu.meta}
+        }
+      }
+      targets {
+        pages {
+          start = {$targets.pages.start}
+        }
+      }
+    }
+
+    variables {
+      header = CONTENT
+      header {
+         table = tt_content
+         select {
+            orderBy = sorting
+            where = colPos=0
+            languageField = sys_language_uid
+         }
+      }
+
+      content = CONTENT
+      content {
+         table = tt_content
+         select {
+            orderBy = sorting
+            where = colPos=1
+            languageField = sys_language_uid
+         }
+      }
+    }
+  }
+}

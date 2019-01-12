@@ -1,0 +1,13 @@
+<f:layout name="DefaultLayout" />
+
+<f:section name="content">
+
+  <f:if condition="{content} != ''">
+    <f:render partial="breadcrumb" />
+  </f:if>
+
+
+  <!--TYPO3SEARCH_begin-->
+  {content -> f:format.raw()}
+  <!--TYPO3SEARCH_end-->
+</f:section>
