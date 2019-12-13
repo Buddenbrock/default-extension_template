@@ -1,0 +1,27 @@
+# customsubcategory=meta=Meta Menu
+# customsubcategory=main=Main Menu
+# customsubcategory=sub=Sub Menu
+# customsubcategory=footer=Footer Menu
+# customsubcategory=targets=Seiten Ziele
+
+sources {
+  menu {
+    # cat=template: menu/meta/100; type=int+; label= Meta menu: Folder id
+    meta =
+    # cat=template: menu/main/110; type=int+; label= Main menu: Levels of  main menu
+    main.levels = 3
+    # cat=template: menu/sub/110; type=int+; label= Sub menu: Levels of sub menu
+    sub.levels = 4
+    # cat=template: menu/footer/100; type=int+; label= Footer menu: Folder id
+    footer =
+  }
+}
+
+targets {
+  pages {
+    # cat=template: menu/targets/pages/140; type=int+; label= ID der Startseite
+    start = 1
+    # cat=template: menu/targets/pages/150; type=int+; label= ID der Kontaktseite
+    contact =
+  }
+}

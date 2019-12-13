@@ -2,23 +2,44 @@ TCEFORM {
   tt_content {
     # Remove the 'border' option from selectbox 'column' in content records
     colPos.keepItems = 1,0,2
-
     # Define labels for header items
     header_layout {
       altLabels {
-        0 = LLL:EXT:xyz_template/Resources/Private/Language/tt_content.xlf:label.header_layout.0
-        1 = LLL:EXT:xyz_template/Resources/Private/Language/tt_content.xlf:label.header_layout.1
-        2 = LLL:EXT:xyz_template/Resources/Private/Language/tt_content.xlf:label.header_layout.2
-        3 = LLL:EXT:xyz_template/Resources/Private/Language/tt_content.xlf:label.header_layout.3
-        4 = LLL:EXT:xyz_template/Resources/Private/Language/tt_content.xlf:label.header_layout.4
-        5 = LLL:EXT:xyz_template/Resources/Private/Language/tt_content.xlf:label.header_layout.5
+        0 = LLL:EXT:template_extension/Resources/Private/Language/tt_content.xlf:label.header_layout.0
+        1 = LLL:EXT:template_extension/Resources/Private/Language/tt_content.xlf:label.header_layout.1
+        2 = LLL:EXT:template_extension/Resources/Private/Language/tt_content.xlf:label.header_layout.2
+        3 = LLL:EXT:template_extension/Resources/Private/Language/tt_content.xlf:label.header_layout.3
+        4 = LLL:EXT:template_extension/Resources/Private/Language/tt_content.xlf:label.header_layout.4
+        5 = LLL:EXT:template_extension/Resources/Private/Language/tt_content.xlf:label.header_layout.5
       }
-      removeItems = 0,6
+      removeItems = 0,1,4,5,6
     }
 
-    # Define global forbidden content-elements
-    CType {
-      removeItems = header, text, textpic, image, textmedia, bullets, table, uploads, menu_abstract, menu_categorized_content, menu_categorized_pages, menu_pages, menu_subpages, menu_recently_updated, menu_related_pages, menu_section, menu_section_pages, menu_sitemap_pages, menu_sitemap, html, div, shortcut
-    }
+  #  tx_template_extra_item {
+  #    types {
+  #      ce_extra {
+  #        config.minitems = 1
+  #        config.maxitems = 3
+  #      }
+  #    }
+  #  }
+
+    // Remove default CTypes
+    CType.removeItems = header, text, textpic, image, textmedia, bullets, table, uploads, menu_abstract, menu_categorized_content, menu_categorized_pages, menu_pages, menu_subpages, menu_recently_updated, menu_related_pages, menu_section, menu_section_pages, menu_sitemap_pages, menu_sitemap, shortcut, plugin, div, html, form_formframework
   }
 }
+
+# Header
+[globalVar = GP:colPos=0]
+  TCEFORM.tt_content.CType.keepItems = ce_text
+[end]
+
+# Main
+[globalVar = GP:colPos=1]
+  TCEFORM.tt_content.CType.keepItems = ce_text
+[end]
+
+# Aside
+[globalVar = GP:colPos=2]
+  TCEFORM.tt_content.CType.keepItems = ce_text
+[end]

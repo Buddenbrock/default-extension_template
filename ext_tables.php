@@ -1,38 +1,30 @@
 <?php
-call_user_func(
-  function ($extKey) {
-    if (!defined('TYPO3_MODE')) {
-      die('Access denied.');
-    }
+defined('TYPO3_MODE') || die();
 
-    # TypoScript-Static-Template im Template-Reiter "Enthält" bekannt machen
-    TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($extKey, 'Configuration/TypoScript', 'XYZ Website');
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
-    # TSConfig-Datei einbinden
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
-      $extKey,
-      'Configuration/PageTS/setup.txt',
-      'XYZ Website'
-    );
-
-    # Register Icons
-    if (TYPO3_MODE === 'BE') {
-      /** @var \TYPO3\CMS\Core\Imaging\IconRegistry $iconRegistry */
-      $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-      $icons = [
-          'text'
-      ];
-      foreach ($icons as $icon) {
-          $iconRegistry->registerIcon(
-              'ce-xyz-' . $icon,
-              \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-              ['source' => 'EXT:' . $extKey . '/Resources/Public/Icons/ContentElements/' . $icon . '.svg']
-          );
-      }
-    }
-
-  # Selbst erstellte Tabellen erlauben
-  #\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_xyz_template_extra_item');
-  },
-  'xyz_template'
+ExtensionManagementUtility::addStaticFile(
+    $_EXTKEY,
+    'Configuration/TypoScript',
+    'Template'
 );
+
+ExtensionManagementUtility::registerPageTSConfigFile(
+    $_EXTKEY,
+    'Configuration/PageTS/setup.txt',
+    'Template'
+);
+
+
+/* Allow Custom Records on Standard Pages */
+/*
+ * $allowTables = [
+ *     'tx_template_extra_item',
+ * ];
+ *
+ * foreach ($allowTables as $allowTable) {
+ *     ExtensionManagementUtility::allowTableOnStandardPages(
+ *         $allowTable
+ *     );
+ * }
+ */

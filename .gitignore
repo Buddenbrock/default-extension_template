@@ -1,5 +1,6 @@
 # TYPO3 Files
-Resources/Public/
+Resources/Vendor/
+Resources/Public/Css/
 
 # git-review
 /.gitreview
@@ -23,9 +24,17 @@ Thumbs.db
 *.old
 .subl*
 
+# SASS Cache
+.sass-cache
+*.sassc
+
 # YARD artifacts
 .yardoc
 _yardoc
+
+# Ruby
+*.rbc
+.ruby-version
 
 # Patch
 **.orig
@@ -38,9 +47,8 @@ _yardoc
 .phpintel
 
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion
-#
 *.iml
 
-#
-# ## Directory-based project format:
+
+# Directory-based project format:
 .idea/

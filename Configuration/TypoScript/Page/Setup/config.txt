@@ -1,0 +1,62 @@
+# The PAGE CONFIG template.
+#
+# Only page.config settings are done here, like character sets, url and language.
+
+config {
+  # Administrator settings
+  admPanel = {$config.adminPanel}
+  debug = {$config.debug}
+  contentObjectExceptionHandler = {$config.contentObjectExceptionHandler}
+  no_cache = {$config.no_cache}
+
+  doctype = html5
+  htmlTag_setParams = class="no-js"
+
+  # Character sets
+  metaCharset = utf-8
+
+  # Disable border attribute of img tags
+  disableImgBorderAttr = 1
+
+  # Cache settings
+  sendCacheHeaders = 1
+  enableContentLengthHeader = 1
+
+  # Link settings
+  typolinkEnableLinksAcrossDomains = 1
+  typolinkCheckRootline = 1
+
+  # Remove targets from links
+  intTarget =
+  extTarget = _blank
+
+  # Indexed Search
+  index_enable = 1
+  index_externals = 1
+
+  # Code cleaning
+  disablePrefixComment = 1
+
+  # Move default CSS and JS to external file
+  removeDefaultJS = external
+  inlineStyle2TempFile = 1
+  removeDefaultCss = 1
+
+  # Protect mail addresses from spamming
+  spamProtectEmailAddresses = 0
+
+  # Comment in the <head> tag
+  headerComment = Created by Dirk Buddenbrock || www.dirk-buddenbrock.de
+
+  # Disable <title> tag
+  noPageTitle = 0
+  pageTitleFirst = 1
+  pageTitleSeparator = {$config.pageTitleSeparator}
+  pageTitleSeparator.noTrimWrap = | | |
+
+  # JS/CSS concatenation/compression
+  concatenateJs = {$config.concatenateJs}
+  concatenateCss = {$config.concatenateCss}
+  compressJs = {$config.compressJs}
+  compressCss = {$config.compressCss}
+}

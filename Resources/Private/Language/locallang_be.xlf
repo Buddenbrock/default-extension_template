@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" product-name="template_extension">
+        <header/>
+        <body>
+            <trans-unit id="backend_layout.index">
+                <source>Index</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.content">
+                <source>Content</source>
+            </trans-unit>
+
+            <trans-unit id="backend_layout.column.header">
+                <source>Header section</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.content">
+                <source>Content section</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.aside">
+                <source>Aside section</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.footer">
+                <source>Footer section</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

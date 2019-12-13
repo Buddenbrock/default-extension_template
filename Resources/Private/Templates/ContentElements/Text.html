@@ -1,14 +1,11 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      v:schemaLocation="https://fluidtypo3.org/schemas/vhs-master.xsd"
       data-namespace-typo3-fluid="true">
 
-  <div class="ce-text" id="ce-{data.uid}">
-    <div>
-      <f:if condition="{data.header}">
+<div id="c{data.uid}" class="ce-text">
+    <f:if condition="{data.header}">
         <h2>{data.header}</h2>
-      </f:if>
-      <f:if condition="{data.bodytext}">
-        <f:format.html>{data.bodytext}</f:format.html>
-      </f:if>
-    </div>
-  </div>
-</html>
+    </f:if>
+    {data.bodytext -> f:format.html()}
+</div>

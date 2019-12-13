@@ -1,0 +1,74 @@
+.socialmedia {
+  background-size: 30px 30px;
+  margin-left: .5rem;
+  padding-left: 30px;
+  transition: $transition-default;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &--blogger {
+    background: $icon-blogger center no-repeat;
+  }
+
+  &--facebook {
+    background: $icon-facebook center no-repeat;
+  }
+
+  &--instagram {
+    background: $icon-instagram center no-repeat;
+  }
+
+  &--linkedin {
+    background: $icon-linkedin center no-repeat;
+  }
+
+  &--pinterest {
+    background: $icon-pinterest center no-repeat;
+  }
+
+  &--rss {
+    background: $icon-rss center no-repeat;
+  }
+
+  &--shop {
+    background: $icon-shop center no-repeat;
+  }
+
+  &--skype {
+    background: $icon-skype center no-repeat;
+  }
+
+  &--telegrm {
+    background: $icon-telegrm center no-repeat;
+  }
+
+  &--tumblr {
+    background: $icon-tumblr center no-repeat;
+  }
+
+  &--twitter {
+    background: $icon-twitter center no-repeat;
+  }
+
+  &--vimeo {
+    background: $icon-vimeo center no-repeat;
+  }
+
+  &--vine {
+    background: $icon-vine center no-repeat;
+  }
+
+  &--whatsapp {
+    background: $icon-whatsapp center no-repeat;
+  }
+
+  &--xing {
+    background: $icon-xing center no-repeat;
+  }
+
+  &--youtube {
+    background: $icon-youtube center no-repeat;
+  }
+}

@@ -1,0 +1,89 @@
+# The PAGE OBJECT template.
+#
+# Tells the PAGE object to use the parsed HTML template from the automaketemplate extension.
+
+# Make the PAGE object
+page = PAGE
+page {
+  typeNum = 0
+
+  # Add a FLUIDTEMPLATE object to the page
+  10 = FLUIDTEMPLATE
+  10 {
+    templateName = TEXT
+    templateName.stdWrap {
+      cObject = TEXT
+      cObject {
+        data = pagelayout
+        required = 1
+
+        case = uppercamelcase
+
+        split {
+            token = pagets__
+            cObjNum = 1
+            1.current = 1
+        }
+
+        pagets__index = TEXT
+        pagets__index.value = Index
+
+        pagets__content = TEXT
+        pagets__content.value = Content
+      }
+      ifEmpty = Content
+    }
+
+    templateRootPaths {
+      10 = {$fluid.belTemplateRootPaths}
+    }
+    layoutRootPaths {
+      10 = {$fluid.belLayoutRootPaths}
+    }
+    partialRootPaths {
+      10 = {$fluid.belPartialRootPaths}
+    }
+
+    variables {
+      header = CONTENT
+      header {
+         table = tt_content
+         select {
+            orderBy = sorting
+            where = colPos=0
+            languageField = sys_language_uid
+         }
+      }
+
+      content = CONTENT
+      content {
+         table = tt_content
+         select {
+            orderBy = sorting
+            where = colPos=1
+            languageField = sys_language_uid
+         }
+      }
+
+      aside = CONTENT
+      aside {
+         table = tt_content
+         select {
+            orderBy = sorting
+            where = colPos=2
+            languageField = sys_language_uid
+         }
+      }
+
+      footer = CONTENT
+      footer {
+         table = tt_content
+         select {
+            orderBy = sorting
+            where = colPos=3
+            languageField = sys_language_uid
+         }
+      }
+    }
+  }
+}

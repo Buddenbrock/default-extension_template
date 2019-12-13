@@ -1,0 +1,31 @@
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+
+          ########### DEFAULT FORM ELEMENT DEFINITIONS ###########
+          formElementsDefinition:
+
+            ### BASE ELEMENTS ###
+            Form:
+              renderingOptions:
+                translation:
+                  translationFile:
+                      110: 'EXT:template_extension/Resources/Private/Language/locallang_fe.xlf'
+                templateRootPaths:
+                  20: 'EXT:template_extension/Resources/Private/Templates/Extensions/Form/'
+                partialRootPaths:
+                  20: 'EXT:template_extension/Resources/Private/Partials/Extensions/Form/'
+                layoutRootPaths:
+                  20: 'EXT:template_extension/Resources/Private/Layouts/Extensions/Form/'
+
+                submitButtonLabel: 'Absenden'
+
+      ########### MIXINS ###########
+      mixins:
+        finishersEmailMixin:
+          options:
+            subject: 'Anfrage &uuml;ber die Webseite'
+            templateRootPaths:
+              10: 'EXT:template_extension/Resources/Private/Templates/Extensions/Form/Finishers/Email/'

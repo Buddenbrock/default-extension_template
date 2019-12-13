@@ -1,0 +1,39 @@
+# The META template.
+#
+# Configures meta information for the website. It's possible this template
+# remains empty because most of the information is handled by constants, which
+# are not allowed here. Constant settings belong to the root.
+page {
+  # Add the icon that will appear in front of the url in the browser
+  # This icon will also be used for the bookmark menu in browsers
+  shortcutIcon = {$plugin.meta.favicon}
+}
+
+page.meta {
+  viewport = width=device-width, initial-scale=1, minimum-scale=1
+
+  # Use the meta tag 'robots' from the constants as default value
+  # If the meta field robots in the page properties is filled, then this will override the default.
+  robots = {$plugin.meta.robots}
+
+  # Use the meta tag 'description' from the constants as default value
+  # If the meta field description in the page properties is filled, then this will override the default.
+  description = {$plugin.meta.description}
+  description.override.field = levelfield:-1, description, slide
+  description.override.field = page:description
+
+  # Use the meta tag 'keywords' from the constants as default value
+  # If the meta field keywords in the page properties is filled, then this will override the default.
+  keywords = {$plugin.meta.keywords}
+  keywords.override.data = levelfield:-1, keywords, slide
+  keywords.override.data = page:keywords
+
+  # Use the meta tag 'author' from the constants as default value
+  # If the meta field author in the page properties is filled, then this will override the default.
+  author = {$plugin.meta.author}
+  author.override.field = levelfield:-1, author, slide
+  author.override.field = author
+
+  date.data = page:SYS_LASTCHANGED
+  date.date = Y-m-d
+}

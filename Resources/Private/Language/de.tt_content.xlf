@@ -1,28 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-  <file source-language="en" target-language="de" datatype="plaintext" original="messages" product-name="xyz_template">
-  <header/>
-  <body>
-    <trans-unit id="label.blockstyle.p" xml:space="preserve">
-      <source>Paragraph</source>
-      <target>Textabsatz</target>
-    </trans-unit>
-    <trans-unit id="label.header_layout.1" xml:space="preserve">
-      <source>Header #1</source>
-      <target>Seitenüberschrift</target>
-    </trans-unit>
-    <trans-unit id="label.header_layout.2" xml:space="preserve">
-      <source>Header #2</source>
-      <target>Überschrift</target>
-    </trans-unit>
-    <trans-unit id="label.header_layout.3" xml:space="preserve">
-      <source>Header #3</source>
-      <target>Zwischenüberschrift</target>
-    </trans-unit>
-    <trans-unit id="label.header_layout.4" xml:space="preserve">
-      <source>Header #4</source>
-      <target>kleine Zwischenüberschrift</target>
-    </trans-unit>
-  </body>
-  </file>
+    <file source-language="de" datatype="plaintext" original="messages" product-name="template_extension">
+        <header/>
+        <body>
+            <trans-unit id="label.blockstyle.p">
+                <target>Textabsatz</target>
+            </trans-unit>
+            <trans-unit id="label.header_layout.1">
+                <target>Seitenüberschrift</target>
+            </trans-unit>
+            <trans-unit id="label.header_layout.2">
+                <target>Überschrift</target>
+            </trans-unit>
+            <trans-unit id="label.header_layout.3">
+                <target>Zwischenüberschrift</target>
+            </trans-unit>
+            <trans-unit id="label.header_layout.4">
+                <target>kleine Zwischenüberschrift</target>
+            </trans-unit>
+        </body>
+    </file>
 </xliff>

@@ -1,0 +1,92 @@
+# Load default processing options
+imports:
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+editor:
+  config:
+    # contentsCss: ["EXT:template_extension/Resources/Public/Css/rte.css"]
+    uiColor: "#ededed"
+
+    stylesSet:
+      - { name: "Lead", element: "p", attributes: { 'class': 'lead' } }
+      - { name: "Button Default", element: "a", attributes: { 'class': 'btn btn-default' } }
+      - { name: "Button Primary", element: "a", attributes: { 'class': 'btn btn-primary' } }
+      - { name: "Button Secondary", element: "a", attributes: { 'class': 'btn btn-secondary' } }
+      - { name: "Button Success", element: "a", attributes: { 'class': 'btn btn-success' } }
+      - { name: "Button Info", element: "a", attributes: { 'class': 'btn btn-info' } }
+      - { name: "Button Warning", element: "a", attributes: { 'class': 'btn btn-warning' } }
+      - { name: "Button Danger", element: "a", attributes: { 'class': 'btn btn-danger' } }
+      - { name: "Button Outline Default", element: "a", attributes: { 'class': 'btn btn-outline-default' } }
+      - { name: "Button Outline Primary", element: "a", attributes: { 'class': 'btn btn-outline-primary' } }
+      - { name: "Button Outline Secondary", element: "a", attributes: { 'class': 'btn btn-outline-secondary' } }
+      - { name: "Button Outline Success", element: "a", attributes: { 'class': 'btn btn-outline-success' } }
+      - { name: "Button Outline Info", element: "a", attributes: { 'class': 'btn btn-outline-info' } }
+      - { name: "Button Outline Warning", element: "a", attributes: { 'class': 'btn btn-outline-warning' } }
+      - { name: "Button Outline Danger", element: "a", attributes: { 'class': 'btn btn-outline-danger' } }
+      - { name: "Muted", element: "span", attributes: { 'class': 'text-muted' } }
+      - { name: "Primary", element: "span", attributes: { 'class': 'text-primary' } }
+      - { name: "Secondary", element: "span", attributes: { 'class': 'text-secondary' } }
+      - { name: "Success", element: "span", attributes: { 'class': 'text-success' } }
+      - { name: "Info", element: "span", attributes: { 'class': 'text-info' } }
+      - { name: "Warning", element: "span", attributes: { 'class': 'text-warning' } }
+      - { name: "Danger", element: "span", attributes: { 'class': 'text-danger' } }
+
+    format_tags: "p;h2;h3;h4;h5;pre"
+
+    toolbarGroups:
+      - { name: styles, groups: [ styles, format ] }
+      - { name: basicstyles, groups: [ basicstyles, align ] }
+      - { name: paragraph, groups: [ list, blocks ] }
+      - { name: links, groups: [ links ] }
+      - '/'
+      - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
+      - { name: editing, groups: [ spellchecker ] }
+      - { name: insert, groups: [ insert ] }
+      - { name: tools, groups: [ specialchar ] }
+      - { name: document, groups: [ mode ] }
+
+    justifyClasses:
+      - text-left
+      - text-center
+      - text-right
+      - text-justify
+
+    extraPlugins:
+      - justify
+
+    removePlugins:
+      - image
+
+    removeButtons:
+      - Anchor
+      - Underline # Unterstrichen
+      - Strike # Durchgestrichen
+      - Subscript # Tiefgestellt
+      - Superscript # Hochgestellt
+      - Table
+      - HorizontalRule
+
+classesAnchor:
+  page:
+    class: 'link-page'
+    type: 'page'
+  folder:
+    class: 'link-folder'
+    type: 'folder'
+  file:
+    class: 'link-file'
+    type: 'file'
+  external:
+    class: 'link-external'
+    type: 'url'
+  mail:
+    class: 'link-mail'
+    type: 'mail'
+
+buttons:
+  link:
+    properties:
+      class:
+        allowedClasses: 'link-arrow, link-no-icon, link-page, link-folder, link-file, link-external, link-mail'

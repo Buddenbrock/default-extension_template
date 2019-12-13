@@ -1,0 +1,119 @@
+<f:section name="facebookPixel">
+    <!-- Facebook-Traking-Pixel Code -->
+    <script data-pixel="fb">
+        var optOutWish = function() {
+            var doNotTrack = navigator.doNotTrack === '1';
+            var hasOptedOut = localStorage.getItem('fb-pixel-status') === 'opt-out';
+            return doNotTrack || hasOptedOut;
+        }
+        if (optOutWish()) {
+            console.info('User prohibits tracking. Not embedding Facebook’s script.')
+        } else {
+            console.log('Embedding Facebook’s script.');
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '{pixelId}');
+            fbq('track', 'PageView');
+        }
+    </script>
+    <!-- End Facebook-Traking-Pixel Code -->
+</f:section>
+
+
+
+<f:section name="googleSiteVerification">
+    <!-- Google Verification Code -->
+    <meta name="google-site-verification" content="{siteVerification}" />
+    <!-- End Google Verification Code -->
+</f:section>
+
+<f:section name="googleTracking">
+    <!-- Google Analytics Code -->
+    <script>
+        var propertyId = '{trackingId}';
+        /*<![CDATA[*/
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', propertyId, 'auto');
+            ga('send', 'pageview', {'anonymizeIp': true});
+        /*]]>*/
+    </script>
+    <!-- End Google Analytics Code -->
+</f:section>
+
+
+
+<f:section name="googleTagManager">
+    <!-- Google Tag-Manager Code -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','{tagManagerId}');
+    </script>
+    <!-- End Google Tag-Manager Code -->
+</f:section>
+
+
+
+<f:section name="matomoTracking">
+    <!-- Matomo Tracking Code -->
+    <script>
+        var _paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//{domain}/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '{trackingId}']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <!-- End Matomo Tracking Code -->
+</f:section>
+
+
+
+<f:section name="matomoTagManager">
+    <!-- Matomo Tag-Manager Code -->
+    <script>
+        var _mtm = _mtm || [];
+        _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src='https://{domain}/js/container_{tagManagerId}.js'; s.parentNode.insertBefore(g,s);
+    </script>
+    <!-- End Matomo Tag-Manager Code -->
+</f:section>
+
+
+
+<f:if condition="{settings.onlineMarketing.facebook.pixelId}">
+    <f:render section="facebookPixel" arguments="{pixelId: settings.onlineMarketing.facebook.pixelId}"/>
+</f:if>
+<f:if condition="{settings.onlineMarketing.google.siteVerification}">
+    <f:render section="googleSiteVerification" arguments="{siteVerification: settings.onlineMarketing.google.siteVerification}"/>
+</f:if>
+<f:if condition="{settings.onlineMarketing.google.trackingId}">
+    <f:render section="googleTracking" arguments="{trackingId: settings.onlineMarketing.google.trackingId}"/>
+</f:if>
+<f:if condition="{settings.onlineMarketing.google.tagManagerId}">
+    <f:render section="googleTagManager" arguments="{tagManagerId: settings.onlineMarketing.google.tagManagerId}"/>
+</f:if>
+<f:if condition="{settings.onlineMarketing.matomo.trackingId} && {settings.onlineMarketing.matomo.domain}">
+    <f:render section="matomoTracking" arguments="{trackingId: settings.onlineMarketing.matomo.trackingId, domain: settings.onlineMarketing.matomo.domain}"/>
+</f:if>
+<f:if condition="{settings.onlineMarketing.matomo.tagManagerId} && {settings.onlineMarketing.matomo.domain}">
+    <f:render section="matomoTagManager" arguments="{tagManagerId: settings.onlineMarketing.matomo.tagManagerId, domain: settings.onlineMarketing.matomo.domain}"/>
+</f:if>

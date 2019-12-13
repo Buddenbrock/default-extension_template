@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+  border: 0;
+  box-sizing: border-box;
+  font: inherit;
+  margin: 0;
+  hyphens: auto;
+  outline: none;
+  padding: 0;
+  position: relative;
+  text-decoration: none;
+  text-size-adjust: 100%;
+  vertical-align: baseline;
+  transition: $transition-default;
+}

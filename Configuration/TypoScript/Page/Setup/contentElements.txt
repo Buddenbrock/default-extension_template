@@ -1,0 +1,13 @@
+# Content Elements
+# Default configuration for content elements which are using FLUIDTEMPLATE directly
+lib.contentElement {
+  templateRootPaths {
+    10 = {$fluid.belTemplateRootPaths}
+  }
+  layoutRootPaths {
+    10 = {$fluid.ceLayoutRootPaths}
+  }
+  partialRootPaths {
+    10 = {$fluid.cePartialRootPaths}
+  }
+}

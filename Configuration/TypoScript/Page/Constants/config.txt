@@ -1,0 +1,28 @@
+# customsubcategory=css=CSS
+# customsubcategory=javascript=Javascript
+
+config {
+  # cat=template: config/100; type=boolean; label= Enable/Disable the admin panel
+  adminPanel = 0
+  # cat=template: config/110; type=boolean; label= Enable/Disable debug helpers
+  debug = 0
+  # cat=template: config/120; type=boolean; label= Hide detailed Error: If active you would see online "Ops an error occured"
+  contentObjectExceptionHandler = 1
+  # cat=template: config/120; type=boolean; label= Enable/Disable typo3 cacheing: If active the page wouldn't load from cache
+  no_cache = 0
+
+
+  # cat=template: config/120; type=string; label= Title Sperator
+  pageTitleSeparator = ::
+
+
+  # cat=template: compression/css/100; type=boolean; label=Concat style sheets
+  concatenateCss = 0
+  # cat=template: compression/css/110; type=boolean; label=Compress style sheets
+  compressCss = 0
+
+  # cat=template: compression/javascript/100; type=boolean; label=Compress javascript
+  compressJs = 0
+  # cat=template: compression/javascript/110; type=boolean; label=Concat javascript
+  concatenateJs = 0
+}

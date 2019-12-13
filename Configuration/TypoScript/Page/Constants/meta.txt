@@ -1,0 +1,16 @@
+plugin.meta {
+  # cat=template: meta/100; type=string; label= Favicon: Favicon Path
+  favicon = EXT:template_extension/Resources/Public/Icons/favicon.svg
+
+  # cat=template: meta/110; type=string; label= Robots: Use for instance these codes: Index all pages: "index,follow".  Index no pages: "none". Only this page: "index,nofollow".  Only subpages: "noindex,follow"
+  robots = noindex,follow
+
+  # cat=template: meta/120; type=string; label= Author: Enter default name of author.
+  author = Testnutzer
+
+  # cat=template: meta/130; type=string; label= Description: Enter default meta description.
+  description = Dieses ist eien Testbeschreibung
+
+  # cat=template: meta/140; type=string; label= Keywords: Enter default meta keyword.
+  keywords = Test, Dummy, Dev, Entwicklung
+}

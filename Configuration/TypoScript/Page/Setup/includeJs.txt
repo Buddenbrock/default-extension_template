@@ -1,0 +1,3 @@
+page.includeJSFooter {
+  default = EXT:template_extension/Resources/Public/JavaScript/site.js
+}

@@ -1,18 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-  <file source-language="en" datatype="plaintext" original="messages" product-name="xyz_template">
-  <header/>
-  <body>
-    <trans-unit id="label.content_elements" xml:space="preserve">
-      <source>Content Elements</source>
-    </trans-unit>
-
-    <trans-unit id="text" xml:space="preserve">
-      <source>Text</source>
-    </trans-unit>
-    <trans-unit id="text.description" xml:space="preserve">
-      <source>Text Element.</source>
-    </trans-unit>
-  </body>
-  </file>
+    <file source-language="en" datatype="plaintext" original="messages" product-name="template_extension">
+        <header/>
+        <body>
+            <trans-unit id="content_elements">
+                <source>Content Elements</source>
+            </trans-unit>
+            <trans-unit id="text">
+                <source>Text-Element</source>
+            </trans-unit>
+            <trans-unit id="text.description">
+                <source>Add an element for display simple text.</source>
+            </trans-unit>
+        </body>
+    </file>
 </xliff>

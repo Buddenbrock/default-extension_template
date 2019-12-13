@@ -1,0 +1,10 @@
+<nav class="menu__footer">
+    <f:if condition="{menuFooter.0.children}">
+        <ul>
+            <f:for each="{menuFooter.0.children}" as="item">
+                    <f:render partial="Menu/Elements/Item" arguments="{item: item}"/>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+</nav>
