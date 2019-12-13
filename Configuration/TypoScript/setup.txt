@@ -1,26 +1,3 @@
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:xyz_template/Configuration/TypoScript/Page/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:xyz_template/Configuration/TypoScript/Page/Config/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:xyz_template/Configuration/TypoScript/Page/HeaderData/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:xyz_template/Configuration/TypoScript/Page/IncludeCss/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:xyz_template/Configuration/TypoScript/Page/IncludeJs/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:xyz_template/Configuration/TypoScript/Page/Language/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:xyz_template/Configuration/TypoScript/Page/Meta/setup.txt">
-
-# Add Extension setup here
-#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:xyz_template/Configuration/TypoScript/Extensions/News/setup.txt">
-
-# Content Elements
-# Default configuration for content elements which are using FLUIDTEMPLATE directly
-lib.contentElement {
-  templateRootPaths {
-    10 = EXT:xyz_template/Resources/Private/Templates/ContentElements/
-  }
-  partialRootPaths {
-    10 = EXT:xyz_template/Resources/Private/Partials/ContentElements/
-  }
-  layoutRootPaths {
-    10 = EXT:xyz_template/Resources/Private/Layouts/ContentElements/
-  }
-}
-
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:xyz_template/Configuration/TypoScript/ContentElements" extensions="txt">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:template_extension/Configuration/TypoScript/Page/Setup" extension="txt">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:template_extension/Configuration/TypoScript/ContentElements/" extension="txt">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:template_extension/Configuration/TypoScript/Extesions/" extension="txt">

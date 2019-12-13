@@ -1,0 +1,47 @@
+page.headerData {
+  10 {
+    settings {
+      onlineMarketing {
+        facebook {
+          pixelId = {$oma.facebook.pixelId}
+        }
+
+        google {
+          trackingId = {$oma.google.trackingId}
+          tagManagerId = {$oma.google.tagManagerId}
+          siteVerification = {$oma.google.siteVerification}
+        }
+
+        matomo {
+          domain = {$oma.matomo.domain}
+          trackingId = {$oma.matomo.trackingId}
+          tagManagerId = {$oma.matomo.tagManagerId}
+        }
+      }
+    }
+  }
+}
+
+page {
+  10 {
+    settings {
+      onlineMarketing {
+        facebook {
+          pixelId = {$oma.facebook.pixelId}
+        }
+
+        google {
+          trackingId = {$oma.google.trackingId}
+          tagManagerId = {$oma.google.tagManagerId}
+          siteVerification = {$oma.google.siteVerification}
+        }
+
+        matomo {
+          domain = {$oma.matomo.domain}
+          trackingId = {$oma.matomo.trackingId}
+          tagManagerId = {$oma.matomo.tagManagerId}
+        }
+      }
+    }
+  }
+}

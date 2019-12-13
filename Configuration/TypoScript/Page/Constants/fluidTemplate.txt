@@ -1,0 +1,18 @@
+# customsubcategory=template=Templates
+# customsubcategory=contentelement=Content Elements
+
+fluid {
+  # cat=template: template paths/template/100; type=string; label= Template Path: Template Root Path
+  belTemplateRootPaths = EXT:template_extension/Resources/Private/Templates/Pages/
+  # cat=template: template paths/template/110; type=string; label= Template Path: Layout Root Path
+  belLayoutRootPaths = EXT:template_extension/Resources/Private/Layouts/Pages/
+  # cat=template: template paths/template/120; type=string; label= Template Path: Partial Root Path
+  belPartialRootPaths = EXT:template_extension/Resources/Private/Partials/Pages/
+
+  # cat=template: template paths/contentelement/100; type=string; label= Content Elements Path: Partial root path
+  ceTemplateRootPaths = EXT:template_extension/Resources/Private/Templates/ContentElements/
+  # cat=template: template paths/contentelement/110; type=string; label= Content Elements Path: Layout root path
+  ceLayoutRootPaths = EXT:template_extension/Resources/Private/Layouts/ContentElements/
+  # cat=template: template paths/contentelement/120; type=string; label= Content Elements Path: Partial root path
+  cePartialRootPaths = EXT:template_extension/Resources/Private/Partials/ContentElements/
+}

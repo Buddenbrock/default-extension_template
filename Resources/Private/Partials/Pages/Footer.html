@@ -1,7 +1,3 @@
-<footer>
-  <v:page.menu as="pages" pageUid="{settings.sources.menu.footer}">
-    <f:for each="{pages}" as="page">
-      <a href="{page.link}">{page.title}</a>
-    </f:for>
-  </v:page.menu>
+<footer class="footer">
+    <f:render partial="Menu/Footer" arguments="{_all}"/>
 </footer>

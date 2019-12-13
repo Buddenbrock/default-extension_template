@@ -1,0 +1,13 @@
+<f:if condition="{item.data.target}">
+	<f:then>
+		<a href="{item.link}" target="{item.data.target}"{f:if(condition: '{item.data.target} == "_blank"', then: ' rel="noreferrer"')} title="{item.data.title}">
+	</f:then>
+	<f:else if="{item.target}">
+		<a href="{item.link}" target="{item.target}"{f:if(condition: '{item.target} == "_blank"', then: ' rel="noreferrer"')} title="{item.data.title}">
+	</f:else>
+	<f:else>
+		<a href="{item.link}" title="{item.data.title}">
+	</f:else>
+</f:if>
+			<span>{item.title}</span>
+		</a>

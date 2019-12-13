@@ -1,0 +1,13 @@
+# The PAGE HEADERDATA template.
+#
+# All config.headerData contents goes in here. This could be almost everything
+# that belongs in the <head>, but does not have any configuration like
+# page.config, page.includeCSS or page.includeJS or needs special
+# configuration, like dynamic handling.
+
+page.headerData {
+    10 = FLUIDTEMPLATE
+    10 {
+        file = EXT:template_extension/Resources/Private/Layouts/HeaderData.html
+    }
+}

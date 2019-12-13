@@ -1,0 +1,10 @@
+<nav class="menu__meta">
+    <f:if condition="{menuMeta.0.children}">
+        <ul>
+            <f:for each="{menuMeta.0.children}" as="item">
+                   <f:render partial="Menu/Elements/Item" arguments="{item: item}"/>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+</nav>

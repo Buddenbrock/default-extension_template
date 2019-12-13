@@ -1,11 +1,27 @@
 <f:layout name="DefaultLayout" />
-
 <f:section name="content">
-  <!--TYPO3SEARCH_begin-->
-  {header -> f:format.raw()}
-  <!--TYPO3SEARCH_end-->
+    <h1>Index</h1>
+    <aside class="stage">
+        <!--TYPO3SEARCH_begin-->
+        {header -> f:format.raw()}
+        <!--TYPO3SEARCH_end-->
+    </aside>
 
-  <!--TYPO3SEARCH_begin-->
-  {content -> f:format.raw()}
-  <!--TYPO3SEARCH_end-->
+    <main class="main">
+        <f:if condition="{content}">
+            <div class="main__content">
+                <!--TYPO3SEARCH_begin-->
+                {content -> f:format.raw()}
+                <!--TYPO3SEARCH_end-->
+            </div>
+        </f:if>
+
+        <f:if condition="{aside}">
+            <aside class="main__aside">
+                <!--TYPO3SEARCH_begin-->
+                {aside -> f:format.raw()}
+                <!--TYPO3SEARCH_end-->
+            </aside>
+        </f:if>
+    </main>
 </f:section>

@@ -5,13 +5,13 @@
 $backupCTypeItems = $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'];
 $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'] = [
   [
-    'LLL:EXT:xyz_template/Resources/Private/Language/locallang_ce.xlf:content_elements',
+    'LLL:EXT:template_extension/Resources/Private/Language/locallang_ce.xlf:content_elements',
     '--div--',
   ],
   [
-    'LLL:EXT:xyz_template/Resources/Private/Language/locallang_ce.xlf:text',
-    'xyz_text',
-    'ce-xyz-text',
+    'LLL:EXT:template_extension/Resources/Private/Language/locallang_ce.xlf:text',
+    'ce_text',
+    'ce-text',
   ],
 ];
 
@@ -25,7 +25,7 @@ unset($backupCTypeItems);
 $tca = [
   'types' => [
     # Add here ce configuration
-    'xyz_text' => [
+    'ce_text' => [
       'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
                       header,
                       bodytext,
@@ -34,19 +34,23 @@ $tca = [
                      --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access',
       'columnsOverrides' => [
         'bodytext' => [
-          'defaultExtras' => 'richtext[*]:rte_transform[mode=ts_links]',
+          'config' => [
+            'enableRichtext' => true,
+            'richtextConfiguration' => 'default'
+          ],
         ]
       ]
     ],
+
   ],
 
   'columns' => [
     # Add Configuration of undertables ind content elements
-    #'tx_xyz_template_extra_item' => [
-    #  'label' => 'LLL:EXT:xyz_template/Resources/Private/Language/locallang_ce.xlf:tx_xyz_template_extra_item.title',
+    #'tx_template_extra_item' => [
+    #  'label' => 'LLL:EXT:template_extension/Resources/Private/Language/locallang_ce.xlf:extra.title',
     #  'config' => [
     #    'type' => 'inline',
-    #    'foreign_table' => 'tx_xyz_template_extra_item',
+    #    'foreign_table' => 'tx_template_extra_item',
     #    'foreign_field' => 'parent',
     #    'appearance' => [
     #      'useSortable' => true,
@@ -59,21 +63,18 @@ $tca = [
     #        'localize' => true,
     #      ],
     #    ],
-    #    'behaviour' => [
-    #      'allowLanguageSynchronization' => true,
-    #      'mode' => 'select',
-    #      'localizeChildrenAtParentLocalization' => true,
-    #    ],
     #  ],
     #],
   ],
+
+  'palettes' => []
 ];
 
 // Add content elements
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes'] = array_merge(
   $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes'],
   array(
-    'xyz_text' => 'ce-xyz-text',
+    'ce_text' => 'ce-text',
   )
 );
 

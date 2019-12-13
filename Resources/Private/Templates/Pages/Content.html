@@ -1,13 +1,21 @@
 <f:layout name="DefaultLayout" />
-
 <f:section name="content">
+    <h1>Content</h1>
+    <main class="main">
+        <f:if condition="{content}">
+            <div class="main__content">
+                <!--TYPO3SEARCH_begin-->
+                {content -> f:format.raw()}
+                <!--TYPO3SEARCH_end-->
+            </div>
+        </f:if>
 
-  <f:if condition="{content} != ''">
-    <f:render partial="breadcrumb" />
-  </f:if>
-
-
-  <!--TYPO3SEARCH_begin-->
-  {content -> f:format.raw()}
-  <!--TYPO3SEARCH_end-->
+        <f:if condition="{aside}">
+            <aside class="main__aside">
+                <!--TYPO3SEARCH_begin-->
+                {aside -> f:format.raw()}
+                <!--TYPO3SEARCH_end-->
+            </aside>
+        </f:if>
+    </main>
 </f:section>

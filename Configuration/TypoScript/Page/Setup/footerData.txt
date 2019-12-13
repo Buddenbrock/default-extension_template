@@ -1,0 +1,11 @@
+# The PAGE FOOTERDATA template.
+#
+# All config.footerData contents goes in here. This could be almost everything
+# that has to include at the bottom of the page (just before the closing </body> tag).
+
+page.footerData {
+  10 = FLUIDTEMPLATE
+  10 {
+    file = EXT:template_extension/Resources/Private/Layouts/FooterData.html
+  }
+}

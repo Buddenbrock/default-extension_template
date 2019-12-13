@@ -1,0 +1,10 @@
+<nav class="menu__breadcrumb">
+	<f:if condition="{breadcrumb}">
+		<ul>
+			<f:for each="{breadcrumb}" as="item">
+					<f:render partial="Menu/Elements/Item" arguments="{item: item}"/>
+				</li>
+		  </f:for>
+		</ul>
+	</f:if>
+</nav>

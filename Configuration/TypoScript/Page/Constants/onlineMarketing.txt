@@ -1,0 +1,28 @@
+# customsubcategory=facebook=Facebook
+# customsubcategory=google=Google
+# customsubcategory=matomo=Matomo
+
+oma {
+  facebook {
+    # cat=template: online marketing/facebook/100; type=string; label= Facebook Tracking Pixel: Enter Property-ID
+    pixelId =
+  }
+
+  google {
+    # cat=template: online marketing/google/100; type=string; label= Google Analytics ID: Enter Property-ID
+    trackingId =
+    # cat=template: online marketing/google/110; type=string; label= Google Tag Manager ID: Enter Container-ID
+    tagManagerId =
+    # cat=template: online marketing/google/120; type=string; label= Google Site Verification: Enter Verification-ID
+    siteVerification =
+  }
+
+  matomo {
+    # cat=template: online marketing/matomo/100; type=string; label= Matomo Domain: Enter domain of matomo backend (without https://)
+    domain = matomo.xyz.de
+    # cat=template: online marketing/matomo/110; type=string; label= Matomo Analytics ID: Enter Property-ID
+    trackingId =
+    # cat=template: online marketing/matomo/120; type=string; label= Matomo Tag Manager ID: Enter Container-ID
+    tagManagerId =
+  }
+}

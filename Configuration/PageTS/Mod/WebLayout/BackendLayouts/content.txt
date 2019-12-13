@@ -2,25 +2,28 @@ mod {
   web_layout {
     BackendLayouts {
       content {
-        title = Inhaltsseite
+        title = LLL:EXT:template_extension/Resources/Private/Language/locallang_be.xlf:backend_layout.content
         config {
           backend_layout {
-            colCount = 1
+            colCount = 2
             rowCount = 1
             rows {
               1 {
                 columns {
                   1 {
-                      name = Inhaltsbereich
+                      name = LLL:EXT:template_extension/Resources/Private/Language/locallang_be.xlf:backend_layout.column.content
                       colPos = 1
-                      allowed = xyz_text
+                  }
+                  2 {
+                      name = LLL:EXT:template_extension/Resources/Private/Language/locallang_be.xlf:backend_layout.column.aside
+                      colPos = 2
                   }
                 }
               }
             }
           }
         }
-        icon = EXT:core/Resources/Public/Icons/T3Icons/apps/apps-pagetree-page-default.svg
+        icon = EXT:template_extension/Resources/Public/Icons/BackendLayouts/bel-content.svg
       }
     }
   }

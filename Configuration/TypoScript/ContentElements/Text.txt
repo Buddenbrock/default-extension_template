@@ -1,4 +1,11 @@
-tt_content.xyz_text =< lib.contentElement
-tt_content.xyz_text {
+tt_content.ce_text =< lib.contentElement
+tt_content.ce_text {
   templateName = Text
+  dataProcessing {
+  10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+  10 {
+    references.fieldName = media
+    as = images
+  }
+}
 }

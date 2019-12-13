@@ -1,1 +1,1 @@
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:xyz_template/Configuration/PageTS/Mod/WebLayout/BackendLayouts" extensions="txt">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:template_extension/Configuration/PageTS/Mod/WebLayout/BackendLayouts/" extension="txt">

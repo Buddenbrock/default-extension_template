@@ -1,16 +1,16 @@
 mod.wizards {
   newContentElement {
     wizardItems {
-      xyz {
-        header = LLL:EXT:xyz_template/Resources/Private/Language/locallang_ce.xlf:content_elements
+      additional_ces {
+        header = LLL:EXT:template_extension/Resources/Private/Language/locallang_ce.xlf:content_elements
 
         elements {
           text {
-            iconIdentifier = ce-xyz-text
-            title = LLL:EXT:xyz_template/Resources/Private/Language/locallang_ce.xlf:text
-            description = LLL:EXT:xyz_template/Resources/Private/Language/locallang_ce.xlf:text.description
+            iconIdentifier = ce-text
+            title = LLL:EXT:template_extension/Resources/Private/Language/locallang_ce.xlf:text
+            description = LLL:EXT:template_extension/Resources/Private/Language/locallang_ce.xlf:text.description
             tt_content_defValues {
-              CType = xyz_text
+              CType = ce_text
             }
           }
         }

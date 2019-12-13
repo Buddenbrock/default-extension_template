@@ -2,34 +2,37 @@ mod {
   web_layout {
     BackendLayouts {
       index {
-        title = Startseite
+        title = LLL:EXT:template_extension/Resources/Private/Language/locallang_be.xlf:backend_layout.index
         config {
           backend_layout {
-            colCount = 1
+            colCount = 2
             rowCount = 2
             rows {
               1 {
                 columns {
                   1 {
-                      name = Kopfbild
+                      name = LLL:EXT:template_extension/Resources/Private/Language/locallang_be.xlf:backend_layout.column.header
                       colPos = 0
-                      allowed = xyz_text
+                      colspan = 2
                   }
                 }
               }
               2 {
                 columns {
                   1 {
-                      name = Inhaltsbereich
+                      name = LLL:EXT:template_extension/Resources/Private/Language/locallang_be.xlf:backend_layout.column.content
                       colPos = 1
-                      allowed = xyz_text
+                  }
+                  2 {
+                      name = LLL:EXT:template_extension/Resources/Private/Language/locallang_be.xlf:backend_layout.column.aside
+                      colPos = 2
                   }
                 }
               }
             }
           }
         }
-        icon = EXT:core/Resources/Public/Icons/T3Icons/mimetypes/mimetypes-x-content-page-language-overlay.svg
+        icon = EXT:template_extension/Resources/Public/Icons/BackendLayouts/bel-index.svg
       }
     }
   }

@@ -1,0 +1,57 @@
+# Make the PAGE object
+page {
+  # Add a FLUIDTEMPLATE object to the page
+  10 {
+    dataProcessing {
+      10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      10 {
+        levels = {$sources.menu.main.levels}
+        includeSpacer = 1
+        as = menuMain
+      }
+      20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      20 {
+        special = list
+        special.value = {$sources.menu.meta}
+        levels = 2
+        as = menuMeta
+      }
+      30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      30 {
+        special = list
+        special.value = {$sources.menu.footer}
+        levels = 2
+        as = menuFooter
+      }
+      40 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      40 {
+        levels = {$sources.menu.sub.levels}
+        entryLevel = 1
+        expandAll = 0
+        includeSpacer = 1
+        as = menuSub
+      }
+      50 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+      50 {
+        languages = auto
+        as = menuLanguage
+      }
+      60 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      60 {
+        special = rootline
+        special.range = 0|-1
+        includeNotInMenu = 1
+        as = breadcrumb
+      }
+    }
+
+    settings {
+      targets {
+        pages {
+          start = {$targets.pages.start}
+          contact = {$targets.pages.contact}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<f:if condition="{menuSub}">
+	<ul class="vertical menu menu-sub">
+		<f:for each="{menuSub}" as="mainItem">
+  			<f:render partial="Menu/Elements/Item" arguments="{item: mainItem}"/>
+  			<f:if condition="{mainItem.children}">
+  				<f:render section="submenu" arguments="{submenu: mainItem.children}"/>
+  			</f:if>
+			</li>
+		</f:for>
+	</ul>
+</f:if>
+
+<f:section name="submenu">
+	<ul class="nested vertical menu">
+		<f:for each="{submenu}" as="subItem">
+			<f:render partial="Menu/Elements/Item" arguments="{item: subItem}"/>
+			<f:if condition="{subItem.children}">
+				<f:render section="submenu" arguments="{submenu: subItem.children}"/>
+			</f:if>
+			</li>
+		</f:for>
+	</ul>
+</f:section>

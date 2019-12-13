@@ -1,0 +1,25 @@
+<nav class="menu__main">
+	<f:if condition="{menuMain}">
+		<ul>
+			<f:for each="{menuMain}" as="mainItem">
+				<f:render partial="Menu/Elements/Item" arguments="{item: mainItem}"/>
+					<f:if condition="{mainItem.children}">
+						<f:render section="submenu" arguments="{submenu: mainItem.children}"/>
+					</f:if>
+				</li>
+			</f:for>
+		</ul>
+	</f:if>
+</nav>
+
+<f:section name="submenu">
+	<ul>
+		<f:for each="{submenu}" as="subItem">
+        <f:render partial="Menu/Elements/Item" arguments="{item: subItem}"/>
+				<f:if condition="{subItem.children}">
+					<f:render section="submenu" arguments="{submenu: subItem.children}"/>
+				</f:if>
+			</li>
+		</f:for>
+	</ul>
+</f:section>
